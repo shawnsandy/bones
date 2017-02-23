@@ -6,21 +6,21 @@
      * Time: 10:15 PM
      */
 
-    namespace ShawnSandy\Extras;
+    namespace :namespace;
 
 
 
 
     use Illuminate\Support\Facades\Facade;
 
-    class ExtrasFacade extends Facade
+    class :providerFacade extends Facade
     {
 
         /**
          *
          */
         protected static function  getFacadeAccessor() {
-            return "Extras";
+            return ":provider";
         }
 
     }
