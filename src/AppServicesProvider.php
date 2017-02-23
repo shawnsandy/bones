@@ -6,8 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 /**
  * Class Provider
- *
- * @package ShawnSandy\PkgStart
+ * @package :namespace
  */
 class :providerServicesProvider extends ServiceProvider
 {
