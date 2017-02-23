@@ -117,21 +117,17 @@ do {
 } while (($modify = strtolower(read_from_console('Modify files with these values? [y/N/q] '))) != 'y');
 echo "\n";
 
-$files = array_merge(
-    glob(__DIR__ . '/*.md'),
-    glob(__DIR__ . '/*.xml.dist'),
-    glob(__DIR__ . '/composer.json'),
-    glob(__DIR__ . '/src/*.php')
-);
-foreach ($files as $f) {
-    $contents = file_get_contents($f);
-    foreach ($replacements as $str => $func) {
-        $contents = str_replace($str, $func(), $contents);
-    }
-    file_put_contents($f, $contents);
-}
+$rename_files = [
+  "App.php",
+  "AppFacade.php",
+  "AppServicesProvider.php",
+];
 
-rename(__DIR__ ."/src/AppServicesProvider.php", __DIR__."/src/".ucfirst($values['package_name']."ServicesProvider.php"));
+foreach ($rename_files as $file):
+
+rename(__DIR__ ."/src/".$file , __DIR__."/src/".ucfirst($values['package_name'].$file));
+
+endforeach;
 
 echo "Done.\n";
 echo "Now you should remove the file '" . basename(__FILE__) . "'.\n";
