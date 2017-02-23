@@ -125,7 +125,7 @@ $rename_files = [
 
 foreach ($rename_files as $file):
 
-rename(__DIR__ ."/src/".$file , __DIR__."/src/".ucfirst($values['package_name'].$file));
+rename(__DIR__ ."/src/".$file , __DIR__."/src/".ucfirst($values['package_name']).$file));
 
 endforeach;
 
