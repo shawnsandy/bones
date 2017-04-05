@@ -82,8 +82,16 @@ gulp.task('package', function() {
         .pipe(gulp.dest('../../public/assets/'))
 })
 
+gulp.task("dev-public", function() {
+    return gulp.watch('./src/public', ['sass'], { "base": "./src/public/" })
+    pipe(changed("../../public/**/*.*"))
+    pipe(gulp.dest("../../public/"))
+
+})
+
+
 gulp.task('watch:sass', function() {
-    gulp.watch('./src/resources/assets/**/*.scss', ['sass']);
+    return gulp.watch('./src/resources/assets/**/*.scss', ['sass']);
 });
 
 gulp.task('default', ["sass", "package"], function() {})
