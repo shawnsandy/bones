@@ -143,7 +143,7 @@ foreach ($rename_files as $file):
 
 
 if(file_exists(__DIR__."/src/".$file))
-rename(__DIR__ ."/src/".$file , __DIR__."/src/".ucfirst($values['package_name']).$file));
+rename(__DIR__ ."/src/".$file , __DIR__."/src/".ucfirst($values['package_name']).$file);
 
 endforeach;
 
