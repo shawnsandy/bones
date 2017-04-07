@@ -67,13 +67,12 @@ class :providerServicesProvider extends ServiceProvider
        $this->mergeConfigFrom(
             __DIR__ . '/config/config.php', ':package_name'
         );
-        /***  remove this line to uncomment and setup ****
+
         $this->app->bind(
-        '__YOUR_FACADE_NAME__', function () {
-        return new YOUR_CLASS_NAME();
+        ':provider', function () {
+        return new :provider();
         }
         );
-        *** remove this line to uncomment ***/
     }
 
 

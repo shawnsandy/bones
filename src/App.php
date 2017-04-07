@@ -9,7 +9,7 @@
     namespace :namespace;
 
 
-    class :provider
+    class :providerApp
     {
 
         public function routes(){
