@@ -17,9 +17,7 @@ class :providerServicesProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (!$this->app->routesAreCached()) {
-            include __DIR__ . '/routes.php';
-        }
+
 
         /**
          * Package views
@@ -52,6 +50,8 @@ class :providerServicesProvider extends ServiceProvider
         if (!$this->app->runningInConsole()) :
             include_once __DIR__ . '/Helpers/helper.php';
         endif;
+
+
 
 
     }
