@@ -33,18 +33,6 @@ const icons = function(iconsDir, outputDir) {
 };
 
 
-gulp.task('icons:entypo', function() {
-    icons('svgs/entypo_385_icons/SVG/', 'entypo');
-});
-
-gulp.task('icons:material', function() {
-    icons('svgs/material_845_icons/SVG/', 'material');
-});
-
-gulp.task('icons:social', function() {
-    icons('svgs/pk-social/SVG/', 'social');
-});
-
 gulp.task('images', function() {
     return gulp.src('images/**/*')
         .pipe(imagemin())
@@ -56,12 +44,6 @@ gulp.task('copy:fonts', function() {
         .pipe(gulp.dest('./src/public/css/fonts/'));
 });
 
-gulp.task('build', function() {
-    gulp.src([
-            './node_modules/aos/dist/**/*.*',
-        ], { 'base': 'node_modules' })
-        .pipe(gulp.dest('src/public/assets/'))
-});
 
 
 gulp.task('sass', function() {
@@ -79,14 +61,7 @@ gulp.task('sass', function() {
 gulp.task('package', function() {
     return gulp.src('./src/resources/assets/**/*.*', { 'base': './src/resources/assets/' })
         .pipe(changed('./src/resources/assets/**/*.*'))
-        .pipe(gulp.dest('../../public/assets/'))
-})
-
-gulp.task("dev-public", function() {
-    return gulp.watch('./src/public', ['sass'], { "base": "./src/public/" })
-    pipe(changed("../../public/**/*.*"))
-    pipe(gulp.dest("../../public/"))
-
+        .pipe(gulp.dest('../../resources/assets/:package_name'))
 })
 
 

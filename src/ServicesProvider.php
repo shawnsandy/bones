@@ -38,6 +38,16 @@ class :providerServicesProvider extends ServiceProvider
                 __DIR__.'/public/assets/' => public_path('assets/')
             ], ':package_name-assets'
         );
+        );
+
+        /**
+         * Package resources to resources
+         */
+        $this->publishes(
+            [
+                __DIR__.'/resources/assets/' => resource_path('assets/:package_name/'),
+            ], ':package_name-resources'
+        );
 
         /**
          * Package config
