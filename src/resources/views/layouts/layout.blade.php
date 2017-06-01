@@ -62,7 +62,8 @@
 <hr>
 @yield('content')
 <footer>
-    <p class="text-center">Footer </p>
+     <hr>
+    <p class="text-center">Powered By Laravel  {{ app()->version() }} </p>
 </footer>
 </body>
 
