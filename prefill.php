@@ -126,6 +126,7 @@ $files = array_merge(
     glob(__DIR__ . '/src/*.php'),
     glob(__DIR__ . '/src/resources/*.php'),
     glob(__DIR__ . '/src/resources/views/*.php'),
+    glob(__DIR__ . '/src/resources/views/layouts/*.php'),
     glob(__DIR__ . '/tests/*.php')
 );
 foreach ($files as $f) {
