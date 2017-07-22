@@ -138,15 +138,17 @@ foreach ($files as $f) {
 }
 
 $rename_files = [
-  "App.php",
-  "AppFacade.php",
-  "AppServicesProvider.php",
+  "Facade.php",
+  "ServicesProvider.php",
 ];
+
+rename(__DIR__."/src/App.php", __DIR__."/src/".ucfirst($values["package_name"]).".php" );
 
 foreach ($rename_files as $file):
 
 
 if(file_exists(__DIR__."/src/".$file))
+
 rename(__DIR__ ."/src/".$file , __DIR__."/src/".ucfirst($values['package_name']).$file);
 
 endforeach;
