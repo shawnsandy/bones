@@ -84,7 +84,7 @@ class :providerServicesProvider extends ServiceProvider
         }
         );
 
-         $this->registerFactoriesPath(__DIR__.'/factories');
+        $this->registerFactoriesPath(__DIR__.'/factories');
 
     }
 
