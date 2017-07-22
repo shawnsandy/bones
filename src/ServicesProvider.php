@@ -83,7 +83,24 @@ class :providerServicesProvider extends ServiceProvider
         return new :provider();
         }
         );
+
+         $this->registerFactoriesPath(__DIR__.'/factories');
+
     }
+
+
+    /**
+    * Register factories.
+    *
+    * @param  string  $path
+    * @return void
+    */
+    protected function registerFactoriesPath($path)
+    {
+        $this->app->make(Factory::class)->load($path);
+    }
+
+
 
 
 }
