@@ -61,6 +61,8 @@ class :providerServicesProvider extends ServiceProvider
             include_once __DIR__ . '/Helpers/helper.php';
         endif;
 
+        $this->loadProviders();
+        $this->loadAliases();
 
 
 
@@ -101,6 +103,53 @@ class :providerServicesProvider extends ServiceProvider
     }
 
 
+        public function loadProviders()
+        {
+
+            /*
+             * load service providers
+             */
+
+            // $this->app->register(\Collective\Html\HtmlServiceProvider::class);
+
+
+
+
+            /*
+             * Dev resources
+             */
+
+            if ($this->app->environment() !== "production") {
+
+
+            }
+
+
+        }
+
+        public function loadAliases() {
+
+
+            /*
+             * Load aliases / facades
+             */
+            $aliases = \Illuminate\Foundation\AliasLoader::getInstance();
+
+           // $aliases->alias("Html", \Collective\Html\HtmlFacade::class);
+
+
+            /*
+           * Dev resources
+           */
+
+            if ($this->app->environment() !== "production") {
+
+                //$aliases->alias('Debugbar', 'Barryvdh\Debugbar\Facade');
+
+            }
+
+
+        }
 
 
 }
