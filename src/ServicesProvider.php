@@ -3,6 +3,7 @@
 namespace :namespace;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Database\Eloquent\Factory;
 
 /**
  * Class Provider
