@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Factory;
 * Class Provider
  * @package :namespace
  */
-class :providerServicesProvider extends ServiceProvider
+class :providerThemesProvider extends ServiceProvider
 {
 
 	/**
