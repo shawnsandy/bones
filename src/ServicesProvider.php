@@ -3,6 +3,7 @@
 namespace :namespace;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Database\Eloquent\Factory;
 
 
 /**
@@ -69,8 +70,31 @@ class :providerServicesProvider extends ServiceProvider
 
 
 		$this->loadMigrationsFrom(__DIR__ . '/migrations');
+        $this->app->bind(
+        ':provider', function () {
+        return new :provider();
+        }
+        );
+
+        $this->registerFactoriesPath(__DIR__.'/factories');
+
+    }
 
 
+    /**
+    * Register factories.
+    *
+    * @param  string  $path
+    * @return void
+    */
+    protected function registerFactoriesPath($path)
+    {
+        $this->app->make(Factory::class)->load($path);
+    }
+
+
+        public function loadProviders()
+        {
 
 		if (!$this->app->runningInConsole()) :
 		            include_once __DIR__ . '/Helpers/helper.php';
