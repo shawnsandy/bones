@@ -139,7 +139,7 @@ foreach ($files as $f) {
 
 $rename_files = [
   "Facade.php",
-  "ServicesProvider.php",
+  "ThemesProvider.php",
 ];
 
 rename(__DIR__."/src/App.php", __DIR__."/src/".ucfirst($values["package_name"]).".php" );
