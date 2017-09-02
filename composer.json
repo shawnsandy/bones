@@ -53,7 +53,7 @@
                 //":namespace\\:providerServicesProvider"
             ],
             "aliases": {
-               //":package": ":namespace\\:providerFacade"
+               //":Provider": ":namespace\\:providerFacade"
             }
         }
     }
