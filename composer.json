@@ -46,5 +46,17 @@
     },
     "config": {
         "sort-packages": true
-    }
+    },
+      "extra": {
+          "laravel": {
+              "providers": [
+                  ":namespace\\:providerServicesProvider"
+              ],
+              "aliases": {
+                  ":package": ":namespace\\:providerFacade"
+              }
+          }
+
+      }
+
 }
