@@ -4,7 +4,7 @@ namespace :namespace;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
-use App\Client;
+
 
 
 
