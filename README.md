@@ -1,5 +1,7 @@
 # :package_name
 
+### A simple laravel toolkit to jump-start package development, based on the PHPLEAGUE Skelton package
+
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
